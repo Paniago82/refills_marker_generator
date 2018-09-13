@@ -86,8 +86,8 @@ class ChilitagGenerator(object):
         popen.wait()
 
     def clean_up(self):
-        # TODO: implement me
-        pass
+        os.remove(self.path_output_svg)
+        os.remove(self.path_chilitag_png)
 
     def side(self):
         if self.num % 2 == 0:
