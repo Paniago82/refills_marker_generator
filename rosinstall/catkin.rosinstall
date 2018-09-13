@@ -1,0 +1,8 @@
+- git: 
+    local-name: ros_markers
+    uri: https://github.com/chili-epfl/ros_markers.git
+    version: master
+- git: 
+    local-name: refills_marker_generator
+    uri: https://github.com/refills-project/refills_marker_generator.git
+    version: master
