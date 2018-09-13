@@ -18,6 +18,7 @@
 import subprocess
 import rospkg
 import argparse
+import os
 
 
 class ChilitagGenerator(object):
@@ -26,9 +27,9 @@ class ChilitagGenerator(object):
 
         # setting up some path names
         r = rospkg.RosPack()
-        self.pkg_path = r.get_path("refills_marker_generator")
-        self.templates_path = self.pkg_path + '/templates/'
-        self.scripts_path = self.pkg_path + '/scripts/'
+        self.pkg_dir = r.get_path("refills_marker_generator")
+        self.current_dir = os.getcwd() +"/"
+        self.templates_path = self.pkg_dir + '/templates/'
 
         # where is the SVG template?
         self.name_svg_template = 'left.svg' if self.is_left() else 'right.svg'
@@ -36,31 +37,31 @@ class ChilitagGenerator(object):
 
         # where is should the chilitag PNG be?
         self.name_chilitag_png = '{}.png'.format(self.num)
-        self.path_chilitag_png = self.scripts_path + self.name_chilitag_png
+        self.path_chilitag_png = self.current_dir + self.name_chilitag_png
 
         # where should the output SVG go?
         self.name_output_svg = '{}.svg'.format(self.num)
-        self.path_output_svg = self.scripts_path + self.name_output_svg
+        self.path_output_svg = self.current_dir + self.name_output_svg
 
         # where should the final PNG go?
         self.name_final_png = self.name_output_svg + ".png"
-        self.path_final_png = self.scripts_path + self.name_final_png
+        self.path_final_png = self.current_dir + self.name_final_png
 
     def run(self):
-        print "Generating Chilitag #{}...".format(self.num)
+        print "Generating Chilitag #{} at {} ...".format(self.num, os.getcwd())
         self.generate_chiltag_png()
         self.write_output_svg(self.replace_svg_placeholders(self.load_svg_template()))
         self.call_inkscape()
+        self.clean_up()
         print "done."
 
     def generate_chiltag_png(self):
-        # TODO: figure out how to find this executable in the workspace
-        arguments = "/home/georg/ros/arrina/devel/bin/chilitags-creator {} 111 n".format(self.num).split()
+        arguments = "{}/../../devel/bin/chilitags-creator {} 111 n".format(self.pkg_dir, self.num)
         # About the params:
         # '111' scales the Marker up to 1110x1110 pixels, and 'n' removes any white margin
         # About calling executable:
         # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
-        popen = subprocess.Popen(arguments, stdout=subprocess.PIPE)
+        popen = subprocess.Popen(arguments.split(), stdout=subprocess.PIPE)
         popen.wait()
         # output = popen.stdout.read()
 
@@ -84,6 +85,10 @@ class ChilitagGenerator(object):
         popen = subprocess.Popen(arguments, stdout=subprocess.PIPE)
         popen.wait()
 
+    def clean_up(self):
+        # TODO: implement me
+        pass
+
     def side(self):
         if self.num % 2 == 0:
             return 'right'
@@ -98,6 +103,7 @@ class ChilitagGenerator(object):
 
 
 if __name__ == '__main__':
+
     try:
         parser = argparse.ArgumentParser(description="Create some augmented 'Chilitag' QR markers for printing.")
         parser.add_argument('first', type=int, help='The first number to encode. It has to be between 1 and 1023.')
@@ -121,6 +127,5 @@ if __name__ == '__main__':
         else:
             gen = ChilitagGenerator(args.first)
             gen.run()
-
     except StandardError as e:
-        print e.message
+        print "Program died with: {}".format(e.message)
