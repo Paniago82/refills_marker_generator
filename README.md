@@ -15,7 +15,22 @@ The printable markers also contain some human-readable information that indicate
 To ease visual inspection, the human-readable information is printed in different colors. As a result, it should be trivial to infer --even from a distance-- whether a set of markers is correctly placed on a shelf. Also, the colors have been chosen to be distinguishable by person with colorblindness.
 
 ### Installation 
-TODO
+Installation has been tested for Ubuntu 16.04 using ROS Kinetic:
+```
+source /opt/ros/kinetic/setup.bash          # start using ROS kinetic
+mkdir -p ~/my_ws/src                        # create directory for workspace
+cd ~/my_ws                                  # go to workspace directory
+catkin init                                 # init workspace
+cd src                                      # go to source directory of workspace
+wstool init                                 # init rosinstall
+wstool merge https://raw.githubusercontent.com/refills-project/refills_marker_generator/master/rosinstall/catkin.rosinstall
+                                            # update rosinstall file
+wstool update                               # pull source repositories
+rosdep install --ignore-src --from-paths .  # install dependencies available through apt
+cd ..                                       # go to workspace directory
+catkin build                                # build packages
+source ~/my_ws/devel/setup.bash             # source new overlay
+```
 
 ### Usage
 To create a single marker file encoding ```<NUM>``` call:
