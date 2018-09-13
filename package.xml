@@ -13,5 +13,6 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>rospy</depend>
+  <exec_depend>ros_markers</exec_depend>
 
 </package>
