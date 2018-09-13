@@ -1,0 +1,110 @@
+#!/usr/bin/env python
+import subprocess
+import rospkg
+import argparse
+
+
+class ChilitagGenerator(object):
+    def __init__(self, num):
+        self.num = num
+
+        # setting up some path names
+        r = rospkg.RosPack()
+        self.pkg_path = r.get_path("refills_marker_generator")
+        self.templates_path = self.pkg_path + '/templates/'
+        self.scripts_path = self.pkg_path + '/scripts/'
+
+        # where is the SVG template?
+        self.name_svg_template = 'left.svg' if self.is_left() else 'right.svg'
+        self.path_svg_template = self.templates_path + self.name_svg_template
+
+        # where is should the chilitag PNG be?
+        self.name_chilitag_png = '{}.png'.format(self.num)
+        self.path_chilitag_png = self.scripts_path + self.name_chilitag_png
+
+        # where should the output SVG go?
+        self.name_output_svg = '{}.svg'.format(self.num)
+        self.path_output_svg = self.scripts_path + self.name_output_svg
+
+        # where should the final PNG go?
+        self.name_final_png = self.name_output_svg + ".png"
+        self.path_final_png = self.scripts_path + self.name_final_png
+
+    def run(self):
+        print "Generating Chilitag #{}...".format(self.num)
+        self.generate_chiltag_png()
+        self.write_output_svg(self.replace_svg_placeholders(self.load_svg_template()))
+        self.call_inkscape()
+        print "done."
+
+    def generate_chiltag_png(self):
+        # TODO: figure out how to find this executable in the workspace
+        arguments = "/home/georg/ros/arrina/devel/bin/chilitags-creator {} 111 n".format(self.num).split()
+        # About the params:
+        # '111' scales the Marker up to 1110x1110 pixels, and 'n' removes any white margin
+        # About calling executable:
+        # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
+        popen = subprocess.Popen(arguments, stdout=subprocess.PIPE)
+        popen.wait()
+        # output = popen.stdout.read()
+
+    def load_svg_template(self):
+        with open(self.path_svg_template, 'r') as f:
+            return f.read()
+
+    def replace_svg_placeholders(self, svg_template):
+        output_svg = svg_template.replace('NUM', '{}'.format(self.num))
+        output_svg = output_svg.replace('RELATIVE-CHILITAGS-PNG', self.name_chilitag_png)
+        return output_svg.replace('ABSOLUTE-CHILITAGS-PNG', self.path_chilitag_png)
+
+    def write_output_svg(self, output_svg):
+        with open(self.path_output_svg, 'w') as f:
+            f.write(output_svg)
+
+    def call_inkscape(self):
+        arguments = "inkscape -e {} {}".format(self.path_final_png, self.path_output_svg).split()
+        # About calling executable:
+        # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
+        popen = subprocess.Popen(arguments, stdout=subprocess.PIPE)
+        popen.wait()
+
+    def side(self):
+        if self.num % 2 == 0:
+            return 'right'
+        else:
+            return 'left'
+
+    def is_left(self):
+        return self.side() == 'left'
+
+    def is_right(self):
+        return self.side() == 'right'
+
+
+if __name__ == '__main__':
+    try:
+        parser = argparse.ArgumentParser(description="Create some augmented 'Chilitag' QR markers for printing.")
+        parser.add_argument('first', type=int, help='The first number to encode. It has to be between 1 and 1023.')
+        parser.add_argument('last',  type=int, nargs='?', help="The last number to encode. It has to be between 1 and 1023,"
+                                                               "and it has to be also greater than 'first'.")
+        args = parser.parse_args()
+
+        if args.first not in range(1, 1024):
+            raise ValueError("First number to encode has to be between 1 and 1023. "
+                             "Instead, {} was given.".format(args.first))
+        if args.last:
+            if args.last not in range(1, 1024):
+                raise ValueError("Last number to encode has to be between 1 and 1023. "
+                                 "Instead, {} was given.".format(args.last))
+            if args.last < args.first:
+                raise ValueError("Last number to encode has to be greater than first number to encode. "
+                                 "Instead, first was '{}' and last was '{}'.".format(args.first, args.last))
+            for i in range(args.first, args.last + 1):
+                gen = ChilitagGenerator(i)
+                gen.run()
+        else:
+            gen = ChilitagGenerator(args.first)
+            gen.run()
+
+    except StandardError as e:
+        print e.message
