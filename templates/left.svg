@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1937"
+   height="1346"
+   viewBox="0 0 1937 1346"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="001left.svg"
+   inkscape:export-filename="/home/georg/Pictures/chilitags_markers/001left/001left.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="68.046241"
+     inkscape:cy="955.60414"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     width="82mm"
+     inkscape:window-width="1855"
+     inkscape:window-height="1176"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     units="px"
+     inkscape:snap-global="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4277" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,293.63779)">
+    <image
+       sodipodi:absref="/home/georg/Pictures/chilitags_markers/colorblindness.palettes.simple.png"
+       y="1142.3622"
+       x="-1558"
+       id="image4195"
+       xlink:href="file:///home/georg/Pictures/chilitags_markers/colorblindness.palettes.simple.png"
+       preserveAspectRatio="none"
+       height="1244"
+       width="3338" />
+    <image
+       sodipodi:absref="ABSOLUTE-CHILITAGS-PNG"
+       xlink:href="RELATIVE-CHILITAGS-PNG"
+       width="1110"
+       height="1110"
+       preserveAspectRatio="none"
+       id="image4260"
+       x="118"
+       y="-175.63779" />
+    <rect
+       style="fill:#00a0fa;fill-opacity:1;stroke:none;stroke-width:3.64348078;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4263"
+       width="473"
+       height="1346"
+       x="1464"
+       y="-293.63779"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:360px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fae6be;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1589.2318"
+       y="474.35336"
+       id="text4265"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4267"
+         x="1589.2318"
+         y="474.35336">L</tspan></text>
+    <g
+       id="g4279"
+       transform="matrix(0.68075451,0,0,0.68075451,144.81434,-356.06061)">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path4273"
+         d="m 2074.7143,1719.5916 83.3263,-159.4949 0.2959,123.6965 386.0671,0.2092 -0.4036,75.458 -385.7615,0.4368 -0.1979,117.934 z"
+         style="fill:#fae6be;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         y="1514.2737"
+         x="2026.0712"
+         height="409.38062"
+         width="47.22691"
+         id="rect4275"
+         style="fill:#fae6be;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:180px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fae6be;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1497.8033"
+       y="-63.530598"
+       id="text4265-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4267-6"
+         x="1497.8033"
+         y="-63.530598">NUM</tspan></text>
+  </g>
+</svg>
