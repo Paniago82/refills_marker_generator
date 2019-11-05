@@ -26,7 +26,7 @@ class BatchPageGenerator(object):
     def __init__(self, first_tag_id, last_tag_id):
         self.first_tag_id = first_tag_id
         self.last_tag_id = last_tag_id
-        self.tags_per_page = 8
+        self.tags_per_page = 9
 
     def run(self):
         for page_id in range(0, self.num_of_pages()):

@@ -15,8 +15,8 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="batch_page.svg">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="batch.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,16 +27,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="304.74876"
-     inkscape:cy="457.50994"
+     inkscape:cx="284.03447"
+     inkscape:cy="565.35703"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:snap-global="false"
-     inkscape:window-width="1855"
-     inkscape:window-height="1176"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:snap-global="true"
+     inkscape:window-width="1613"
+     inkscape:window-height="995"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,77 +54,111 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <image
-       sodipodi:absref="ABS-MARKER-PNG1"
-       y="55.74707"
-       x="398.07144"
-       id="image4265"
-       xlink:href="REL-MARKER-PNG1"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG2"
-       y="55.74707"
-       x="72.357117"
-       id="image4276"
-       xlink:href="REL-MARKER-PNG2"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG3"
-       y="292.88992"
-       x="398.07144"
-       id="image4287"
-       xlink:href="REL-MARKER-PNG3"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG4"
-       y="292.88992"
-       x="72.357117"
-       id="image4298"
-       xlink:href="REL-MARKER-PNG4"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG5"
-       y="564.31848"
-       x="398.07144"
-       id="image4309"
-       xlink:href="REL-MARKER-PNG5"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG6"
-       y="564.31848"
-       x="72.357117"
-       id="image4320"
-       xlink:href="REL-MARKER-PNG6"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG7"
-       y="804.31848"
-       x="398.07144"
-       id="image4331"
-       xlink:href="REL-MARKER-PNG7"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
-    <image
-       sodipodi:absref="ABS-MARKER-PNG8"
-       y="804.31848"
-       x="72.357117"
-       id="image4342"
-       xlink:href="REL-MARKER-PNG8"
-       preserveAspectRatio="none"
-       height="201.90082"
-       width="290.55118" />
+    <g
+       id="g862"
+       transform="translate(36.160714,-22.767857)">
+      <g
+         transform="translate(6.6964286,109.82143)"
+         id="g838">
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG1"
+           xlink:href="REL-MARKER-PNG1"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4265"
+           x="6.8683248"
+           y="-235.5475" />
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG2"
+           xlink:href="REL-MARKER-PNG2"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4276"
+           x="297.41949"
+           y="-235.5475" />
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG3"
+           xlink:href="REL-MARKER-PNG3"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4298"
+           x="587.97064"
+           y="-235.5475" />
+      </g>
+      <g
+         transform="translate(-11.849027,112.5)"
+         id="g843">
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG4"
+           xlink:href="REL-MARKER-PNG4"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4287"
+           x="4.1897569"
+           y="-455.99377" />
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG5"
+           xlink:href="REL-MARKER-PNG5"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4320"
+           x="294.74094"
+           y="-455.99377" />
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG6"
+           xlink:href="REL-MARKER-PNG6"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4331"
+           x="585.29211"
+           y="-455.99377" />
+      </g>
+      <g
+         transform="translate(-52.894742,105.35717)"
+         id="g848">
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG7"
+           xlink:href="REL-MARKER-PNG7"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4309"
+           x="301.88376"
+           y="-698.94031" />
+        <image
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG8"
+           xlink:href="REL-MARKER-PNG8"
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90082"
+           preserveAspectRatio="none"
+           id="image4342"
+           x="11.332588"
+           y="-698.94031" />
+        <image
+           transform="rotate(90)"
+           width="290.55118"
+           height="201.90083"
+           preserveAspectRatio="none"
+           id="image4309-3"
+           x="592.43494"
+           y="-698.94031"
+           xlink:href="REL-MARKER-PNG9"
+           sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/REL-MARKER-PNG9" />
+      </g>
+    </g>
   </g>
 </svg>

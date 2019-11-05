@@ -75,7 +75,7 @@ class ChilitagGenerator(object):
             f.write(output_svg)
 
     def call_inkscape(self):
-        arguments = "inkscape -e {} {}".format(self.path_final_png, self.path_output_svg).split()
+        arguments = "inkscape -e {} {} -d 600".format(self.path_final_png, self.path_output_svg).split()
         # About calling executable:
         # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
         popen = subprocess.Popen(arguments, stdout=subprocess.PIPE)
