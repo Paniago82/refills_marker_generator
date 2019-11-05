@@ -10,13 +10,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1772"
-   height="1772"
-   viewBox="0 0 1772 1772"
+   width="1937"
+   height="1346"
+   viewBox="0 0 1937 1346"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="right.svg"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="002right.svg"
    inkscape:export-filename="/home/georg/Pictures/chilitags_markers/002right/002right.svg.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -30,16 +30,16 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.24748737"
-     inkscape:cx="774.56002"
-     inkscape:cy="1198.5309"
+     inkscape:cx="216.36429"
+     inkscape:cy="805.44412"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      width="82mm"
-     inkscape:window-width="1613"
-     inkscape:window-height="995"
-     inkscape:window-x="67"
-     inkscape:window-y="27"
+     inkscape:window-width="1855"
+     inkscape:window-height="1176"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      units="px"
      inkscape:snap-global="true">
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,47 +63,47 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,719.63779)">
+     transform="translate(0,293.63779)">
     <image
-       sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/colorblindness.palettes.simple.png"
-       xlink:href="colorblindness.palettes.simple.png"
-       width="3338"
-       height="1244"
-       preserveAspectRatio="none"
-       id="image4195"
+       sodipodi:absref="/home/georg/Pictures/chilitags_markers/colorblindness.palettes.simple.png"
+       y="1144.6479"
        x="-1563.2858"
-       y="1144.6479" />
+       id="image4195"
+       xlink:href="file:///home/georg/Pictures/chilitags_markers/colorblindness.palettes.simple.png"
+       preserveAspectRatio="none"
+       height="1244"
+       width="3338" />
     <rect
-       style="fill:#fae6be;fill-opacity:1;stroke:none;stroke-width:3.70737648;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#fae6be;fill-opacity:1;stroke:none;stroke-width:3.64348078;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4263"
-       width="372"
-       height="1772"
+       width="473"
+       height="1346"
        x="0"
-       y="-719.63782"
+       y="-293.63779"
        ry="0" />
     <image
-       sodipodi:absref="/home/georg/ros/src/refills_marker_generator/templates/RELATIVE-CHILITAGS-PNG"
+       sodipodi:absref="ABSOLUTE-CHILITAGS-PNG"
        xlink:href="RELATIVE-CHILITAGS-PNG"
-       width="1110"
-       height="1110"
-       preserveAspectRatio="none"
+       y="-185.63779"
+       x="709"
        id="image4204"
-       x="544"
-       y="-185.63779" />
+       preserveAspectRatio="none"
+       height="1110"
+       width="1110" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00a0fa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="121.46775"
-       y="472.33304"
-       id="text4265"><tspan
+       style="font-style:normal;font-weight:normal;font-size:360px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00a0fa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="97.224091"
+       y="474.35333"
+       id="text4265"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4267"
-         x="121.46775"
-         y="472.33304"
-         style="font-size:192px;line-height:1.25">R</tspan></text>
+         x="97.224091"
+         y="474.35333">R</tspan></text>
     <g
        id="g4279"
-       transform="matrix(-0.46411577,0,0,0.46411577,1239.2422,67.820291)"
+       transform="matrix(-0.68075451,0,0,0.68075451,1790.4586,-348.91775)"
        style="fill:#00a0fa;fill-opacity:1">
       <path
          sodipodi:nodetypes="cccccccc"
@@ -121,14 +121,14 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00a0fa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="78.383659"
-       y="-74.714073"
-       id="text4265-3"><tspan
+       style="font-style:normal;font-weight:normal;font-size:180px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00a0fa;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="23.835421"
+       y="-70.673462"
+       id="text4265-3"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4267-6"
-         x="78.383659"
-         y="-74.714073"
-         style="font-size:96px;line-height:1.25">NUM</tspan></text>
+         x="23.835421"
+         y="-70.673462">NUM</tspan></text>
   </g>
 </svg>
