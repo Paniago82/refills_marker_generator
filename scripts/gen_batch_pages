@@ -26,6 +26,7 @@ if __name__ == '__main__':
         parser.add_argument('first', type=int, help='The first number to encode. It has to be between 1 and 1023.')
         parser.add_argument('last',  type=int, help="The last number to encode. It has to be between 1 and 1023,"
                                                                "and it has to be also greater than 'first'.")
+        parser.add_argument('mode',  type=int, help="Set Batch Mode 0 for Chilitags and 1 for QR Code")
         args = parser.parse_args()
 
         if args.first not in range(1, 1024):
@@ -37,8 +38,10 @@ if __name__ == '__main__':
         if args.last < args.first:
             raise ValueError("Last number to encode has to be greater than first number to encode. "
                              "Instead, first was '{}' and last was '{}'.".format(args.first, args.last))
-
-        my_gen = BatchPageGenerator(args.first, args.last)
+        if args.mode not in range(0, 2):
+            raise ValueError("Mode has to be between 0 and 1. "
+                             "Instead, {} was given.".format(args.mode))
+        my_gen = BatchPageGenerator(args.first, args.last, args.mode)
         my_gen.run()
     except StandardError as e:
         print "Program died with: {}".format(e.message)

@@ -19,8 +19,9 @@ import os
 
 
 class ChilitagGenerator(object):
-    def __init__(self, num):
+    def __init__(self, num, mode):
         self.num = num
+        self.mode = mode
 
         # setting up some path names
         r = rospkg.RosPack()
@@ -45,21 +46,31 @@ class ChilitagGenerator(object):
         self.path_final_png = self.current_dir + self.name_final_png
 
     def run(self):
-        print "Generating Chilitag #{} at {}".format(self.num, os.getcwd())
-        self.generate_chiltag_png()
+        if self.mode == 0:
+            print "Generating Chilitag #{} at {}".format(self.num, os.getcwd())
+            self.generate_chiltag_png()
+        else:
+            print "Generating Qr Code #{} at {}".format(self.num, os.getcwd())
+            self.generate_qr_code_png()
+
         self.write_output_svg(self.replace_svg_placeholders(self.load_svg_template()))
         self.call_inkscape()
         self.clean_up()
 
     def generate_chiltag_png(self):
         arguments = "{}/../../devel/bin/chilitags-creator {} 111 n".format(self.pkg_dir, self.num)
-        # About the params:
+        # About the params:s
         # '111' scales the Marker up to 1110x1110 pixels, and 'n' removes any white margin
         # About calling executable:
         # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
         popen = subprocess.Popen(arguments.split(), stdout=subprocess.PIPE)
         popen.wait()
         # output = popen.stdout.read()
+
+    def generate_qr_code_png(self):
+        arguments = "qrencode -s 300 {} -o {}.png --8bit -m 1".format(self.num,self.num)
+        popen = subprocess.Popen(arguments.split(), stdout=subprocess.PIPE)
+        popen.wait()
 
     def load_svg_template(self):
         with open(self.path_svg_template, 'r') as f:

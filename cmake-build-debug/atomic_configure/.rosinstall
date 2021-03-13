@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/john/ubica_ws/src/refills_marker_generator/cmake-build-debug/devel/setup.sh

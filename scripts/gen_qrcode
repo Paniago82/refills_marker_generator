@@ -39,10 +39,10 @@ if __name__ == '__main__':
                 raise ValueError("Last number to encode has to be greater than first number to encode. "
                                  "Instead, first was '{}' and last was '{}'.".format(args.first, args.last))
             for i in range(args.first, args.last + 1):
-                gen = ChilitagGenerator(i,0)
+                gen = ChilitagGenerator(i,1)
                 gen.run()
         else:
-            gen = ChilitagGenerator(args.first,0)
+            gen = ChilitagGenerator(args.first,1)
             gen.run()
     except StandardError as e:
         print "Program died with: {}".format(e.message)

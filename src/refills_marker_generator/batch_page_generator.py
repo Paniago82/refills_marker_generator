@@ -23,9 +23,10 @@ from refills_marker_generator.paths import path_batch_svg, output_dir, path_batc
 
 
 class BatchPageGenerator(object):
-    def __init__(self, first_tag_id, last_tag_id):
+    def __init__(self, first_tag_id, last_tag_id, mode):
         self.first_tag_id = first_tag_id
         self.last_tag_id = last_tag_id
+        self.mode = mode
         self.tags_per_page = 9
 
     def run(self):
@@ -38,8 +39,12 @@ class BatchPageGenerator(object):
         for marker_offset in range(0, self.tags_per_page):
             current_tag_id = self.calc_tag_id(page_id, marker_offset)
             if  current_tag_id <= self.last_tag_id:
-                tag_generator = ChilitagGenerator(current_tag_id)
-                tag_generator.run()
+                if self.mode == 0:
+                    tag_generator = ChilitagGenerator(current_tag_id,0)
+                    tag_generator.run()
+                else:
+                    tag_generator = ChilitagGenerator(current_tag_id,1)
+                    tag_generator.run()
 
     def load_svg_template(self):
         with open(path_batch_template(), 'r') as f:
